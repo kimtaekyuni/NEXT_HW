@@ -1,0 +1,67 @@
+img {
+    position: relative;;
+    height: 70px;
+    width: 70px;
+    margin: 10px;
+
+}
+
+.back{
+    background-color: black;
+    height: 120px;
+    width: 500px;
+    text-align: center;
+    top: 500px;
+    left: 700px;
+    position: relative;
+    display: flex;
+}
+
+.main {
+    color: gainsboro;
+    position: relative;
+    font-family: '맑은 고딕';
+    font-size: 20px;
+    height: 40px;
+    margin: 10px;
+    margin-bottom: 0px;
+
+}
+
+#content {
+    color: white;
+    position: relative;
+    font-family: '맑은 고딕';
+    font-size: 15px;
+    height: 40px;
+    margin-top: 0px;
+    top: 50px;
+    right: 290px;
+    opacity: 0.7;
+}
+
+
+p {
+    color: white;
+    position: relative;
+    font-family: '맑은 고딕';
+    font-size: 10px;
+    display: flex;
+}
+
+
+.time {
+    opacity: 0.3;
+    display: flex;
+    font-size: 12px;
+    text-align: right;
+    lefT: 70px;
+    top: 10px;
+}
+
+#number {
+    font-size: 20px;
+    opacity: 0.3;
+    bottom: 12px;
+    right: 4px;
+}

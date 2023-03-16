@@ -1,0 +1,274 @@
+body {
+   position: relative;
+   width: 458px;
+   height: 1120px;
+   border: 1px solid black;
+   border-bottom: 0px;
+   
+
+}
+
+#arroW_icon {
+   position: absolute;
+   left: 50px;
+}
+
+
+/*제일 윗 부분 바*/
+.first_line {
+   position: fixed;
+   display: flex;
+   width: 458px;
+   height: 54px;
+   align-items: center;
+   border-bottom: 1px solid #686565ea;
+   background-color: whitesmoke;
+}
+
+
+#menu_comment {
+   position: absolute;
+   left: 50%;
+   transform: translate(-50%);
+   font-size: 18px;
+   font-weight: bold;
+}
+
+/* second line 부분*/
+
+
+.second_line {
+   position: absolute;
+   margin-top: 44px;
+   padding-top: 34px;
+   width: 458px;
+   height: 120px;
+}
+
+#next_main_icon {
+   position: absolute;
+   left: 30px;
+}
+
+#se_comment {
+   position: absolute;
+   left: 140px;
+   font-size: 18px;;
+}
+
+#dots {
+   position: absolute;
+   left: 280px;
+   font-size: 15px;
+   top: 55px; 
+   margin: 0;
+   font-weight: bold;
+   width: 45px;
+   display: inline-block;
+
+}
+
+#fol {
+   position: absolute;
+   margin: 0;
+   left: 145px;
+   background-color: #0095f6;
+   color: white;
+   width: 85px;
+   height: 35px;
+   text-align: center;
+   align-items: center;
+   top: 60%;
+   font-size: 18px;
+   border-radius: 20%;
+}
+
+#message {
+   position: absolute;
+   left: 250px;
+   margin: 0;
+   top: 60%;
+   background-color: #efefef;
+   text-align: center;
+   width: 85px;
+   height: 45px;
+   font-size: 16px;
+   border-radius: 20%;
+
+}
+
+#user_plus_icon {
+   position: absolute;
+   right: 15%;
+   top: 60%;
+   margin: 10px;
+   background-color: #efefef;
+   border-radius: 20%;
+}
+
+/*explain 란*/
+
+.explain_line {
+   position: absolute;
+   top:  209px;
+   lefT: 10px;
+}
+
+.explain_line > p {
+   margin: 0;
+   font-size: 14px;
+}
+
+.explain_line > a {
+   font-size: 14px;
+}
+
+#o1 {
+   opacity: 0.5;
+}
+
+/* story line*/
+
+.story_line {
+   position: absolute;
+   width: 458px;
+   height:85px;
+   top: 350px;
+   margin-bottom: 20px;
+  
+}
+
+.story_line > #next_main_icon {
+   position: absolute;
+}
+
+.story_line > p {
+   position: absolute;
+   left: 40px;
+   top: 50px;
+   font-size: 13px;
+    
+}
+
+/* friend line*/
+
+.friend_number {
+   position: absolute;
+   top: 438px;
+   display: flex;
+  
+}
+
+#friend_number_text {
+   position: absolute;
+   justify-content: center;
+   width: 458px;
+   display: inline-block;
+   text-align: center;
+   word-spacing: 90px;
+   border-top: 1px solid gray;
+   margin: 0;
+   padding: 0;
+   opacity: 0.7;
+   font-size: 14px;
+}
+
+#friend_number_number {
+   position: absolute;
+   width: 458px;
+   word-spacing: 113px;
+   left: -5px;
+   top: 20px;
+   margin: 0px;
+   padding: 0px;
+   align-items: flex-start;
+   border-bottom: 1px solid gray;
+   font-weight: bold;
+   font-size: 15px;
+}
+
+/* book menu */
+.book_menu {
+   position: absolute;
+   width: 458px; 
+   height: 40px;
+   top: 510px;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+
+}
+
+#book_menu_icon {
+   width: 27px; 
+   height: 27px;
+}
+
+#book {
+   width: 27px; 
+   height: 27px;
+}
+
+/* 이미지 부분 */
+
+.imagepart {
+    display: flex;
+    position: absolute;
+    top: 560px;
+}
+
+#part1 {
+   position: absolute;
+   display: inline;
+   width: 458px;
+   text-align: center;
+}
+
+#part2 {
+   position: absolute;
+   top: 145px;
+   display: inline;
+   width: 458px;
+   text-align: center;
+}
+
+#part3 {
+   position: absolute;
+   top: 290px;
+   display: inline;
+   width: 458px;
+   text-align: center;
+}
+
+
+/* 제일 아래 메뉴 바 부분*/
+body {
+   position: relative;
+   overflow: auto;
+}
+
+.low_line{
+   position: fixed;
+   display: flex;
+   width: 458px;
+   height: 49px;
+   justify-content: space-around;
+   align-items: center;
+   top: 780px;
+   background-color: whitesmoke;  
+}
+
+footer {
+   background: white;
+   width: 460px;
+   height: 44px;
+   bottom: 0px;
+   position: fixed;
+   margin-left: 1px solid white;
+}
+
+.content {
+   border: 1px solid black;
+}
+
+
