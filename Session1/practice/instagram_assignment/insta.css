@@ -2,9 +2,10 @@ body {
    position: relative;
    width: 458px;
    height: 1120px;
-   border: 1px solid black;
-   border-bottom: 0px;
-   
+   border-left: 1px solid black;
+   border-right: 1px solid black;
+   border-bottom: 1px solid black;
+   margin: 0;
 
 }
 
@@ -23,6 +24,7 @@ body {
    align-items: center;
    border-bottom: 1px solid #686565ea;
    background-color: whitesmoke;
+   z-index: 1;
 }
 
 
@@ -43,6 +45,7 @@ body {
    padding-top: 34px;
    width: 458px;
    height: 120px;
+   z-index: -1;
 }
 
 #next_main_icon {
@@ -112,6 +115,7 @@ body {
    position: absolute;
    top:  209px;
    lefT: 10px;
+   z-index: -1;
 }
 
 .explain_line > p {
@@ -261,14 +265,7 @@ body {
 footer {
    background: white;
    width: 460px;
-   height: 44px;
+   height: 100px;
    bottom: 0px;
    position: fixed;
-   margin-left: 1px solid white;
 }
-
-.content {
-   border: 1px solid black;
-}
-
-
