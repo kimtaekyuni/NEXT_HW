@@ -1,0 +1,228 @@
+.main_board {
+    position: absolute; 
+    width: 400px;
+    height: 800px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid black;
+    background-color: whitesmoke;
+
+}
+
+.first_line > pre {
+    font-size: 20px;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+}
+
+
+.first_line {
+    display : inline-flex;
+    width: 400px;
+    letter-spacing: 20px;
+    margin-left: 15px;
+    margin-top:5px;
+}
+
+
+
+.first_line > pre {
+    opacity: 0.5;
+    weight: bold;
+    color: black;
+    font-size: 24px;
+    margin-left: 1%;
+    letter-spacing: normal;
+}
+
+
+.point {
+    position: absolute;
+    width: 93%;
+    height: 10%;
+    background-color: white;
+    top: 7%;
+    border-radius: 10%;
+    margin: 0 auto;
+    display: flex;
+}
+
+#point {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+}
+
+.point > p {
+    letter-spacing: normal;
+    opacity: 0.7;
+    font-size: 12px;
+    left: 75px;
+    position: absolute;
+    font-weight: bold;
+}
+
+.invest {
+    position: absolute;
+    width: 100%;
+    height: 240%;
+    background-color: white;
+    top: 100px;
+    border-radius: 10%;
+    margin: 0 auto;
+    display: flex;
+}
+
+#invest {
+    position: absolute;
+    left: 20px;
+    top: 90px;
+}
+
+#tb2 {
+    font-size: 24px;
+    letter-spacing: normal;
+    position: absolute;
+    white-space: nowrap;
+    font-weight: bold;
+    left: 25px;
+    opacity: 0.9;
+    top: -5px;
+}
+
+#tb3 {
+    position: absolute;
+    font-size: 14px;
+    letter-spacing: normal;
+    opacity: 0.5;
+    top: 80px;
+    font-weight: bold;
+    left: 80px;   
+}
+
+#arrow {
+    position: absolute;
+    opacity: 0.5;
+    left: 340px;
+    top: 20px; 
+}
+
+.consume {
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    background-color: white;
+    top: 210px;
+    border-radius: 10%;
+    margin: 0 auto;
+    display: flex;
+}
+
+#consume {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 60px;
+    left: 20px;
+
+}
+
+#consume1 {
+    position: absolute;
+    letter-spacing: normal;
+    white-space: nowrap;
+    left: 20px;
+    top: -10px;
+}
+
+#c2 {
+    position: absolute;
+    letter-spacing: normal;
+    opacity: 0.5;
+    font-weight: bold;
+    font-size: 14px;
+    top: 50px;
+    left: 90px;
+}
+
+#cs1 {
+    color: black;
+    font-weight: bold;
+    position: relative;
+    top: 70px;
+    font-size: 16px;
+    left: 285px;
+    opacity: 0.8;
+    width: 60px;
+    height: 40px;
+    background-color: whitesmoke;
+    margin: 0;
+    justify-content: space-around;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 12%; 
+    letter-spacing: normal;
+   
+}
+
+.group {
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    background-color: white;
+    top: 190px;
+    border-radius: 10%;
+    margin: 0 auto;
+    display: flex;
+}
+
+#group1 {
+    position: absolute;
+    font-weight: bold;
+    font-size: 24px;
+    left: 20px; 
+    top: -10px;
+    letter-spacing: normal;
+}
+
+#group {
+    position: absolute;
+    left: 20px;
+    top: 65px;
+    width: 50px;
+    height: 50px;
+}
+
+#g2 {
+    position: absolute;
+    font-size: 14px;
+    opacity: 0.8;
+    letter-spacing: normal;
+    left: 90px;
+    top: 50px;
+}
+
+#a2 {
+    position: absolute;
+    font-size: 16px;
+    opacity: 0.8;
+    font-weight: bold;
+    letter-spacing: normal;
+    left: 90px;
+    top: 70px;
+}
+
+.last_line {
+    position: absolute;
+    top: 200px;
+    left: 30px
+}
+
+.options {
+    display: inline-flex;
+
+}
+
