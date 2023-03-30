@@ -15,7 +15,8 @@ chrome_driver = "C:/Users/tgkim/OneDrive/바탕 화면/NEXT 자료/NEXT_HW/Sessi
 driver = webdriver.Chrome(chrome_driver, options= chrome_options)
 
 # 실행할 웹페이지 불러오기 (멜론 차트)
-driver.get("https://www.melon.com/index.htm")
+driver.get("https://movie.naver.com/movie/sdb/rank/rmovie.naver")
+
 
 # 멜론 차트 버튼 클릭
 #chartbtn = driver.find_element(By.XPATH, '//*[@id="gnb_menu"]/ul[1]/li[1]/a/span[2]')
@@ -72,18 +73,18 @@ driver.get("https://www.melon.com/index.htm")
 
 
 # csv 파일로 변환
-chartbtn4 = driver.find_element(By.XPATH, '//*[@id="gnb_menu"]/ul[1]/li[1]/a/span[2]')
-chartbtn4.click()
-time.sleep(1)
-for i in range(1, 51):
-    list = driver.find_element(By.XPATH,f'/html/body/div/div[3]/div/div/div[3]/form/div/table/tbody/tr[{i}]/td[6]/div/div/div[1]/span/a').text
-    print(list)
-    time.sleep(3)
+#chartbtn4 = driver.find_element(By.XPATH, '//*[@id="gnb_menu"]/ul[1]/li[1]/a/span[2]')
+#chartbtn4.click()
+#time.sleep(1)
+#for i in range(1, 51):
+#    list = driver.find_element(By.XPATH,f'/html/body/div/div[3]/div/div/div[3]/form/div/table/tbody/tr[{i}]/td[6]/div/div/div[1]/span/a').text
+#  time.sleep(3)
 
-import csv
+#import csv
 
-file = open('melon.csv', mode='w', newline='')
-writer = csv.writer(file)
-writer.writerow(['rank','title','singer'])
-    writer.writerow([rank, title, singer])
-file.close()
+#file = open('melon.csv', mode='w', newline='')
+#writer = csv.writer(file)
+#writer.writerow(['rank','title','singer'])
+#    writer.writerow([rank, title, singer])
+#file.close()
+
