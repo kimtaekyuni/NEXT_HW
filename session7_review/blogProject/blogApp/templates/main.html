@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}" />
+</head>
+<body>
+    <a id='comment' href="{% url 'new' %}">글 쓰러 가기</a>
+    <div class="board">
+        <div class="취미">
+            <p><a href="{% url 'list' 'hobby' %}">취미 [{{ hobby_len }}]</a></p>
+            <img id="hobby" src="../static/image/health.png" width="300px" height="300px"/>
+        </div>
+        <div class="음식">
+            <p><a href="{% url 'list' 'food' %}">음식 [{{ food_len }}]</a></p>
+            <img id="food" src="../static/image/meat.png" width="300px" height="300px"/>
+        </div>
+        <div class="프로그래밍">
+            <p><a href="{% url 'list' 'programming' %}">프로그래밍 [{{ programming_len }}]</a></p>
+            <img id="programming" src="../static/image/programming.png" width="300px" height="300px"/>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+.board {
+    position: absolute;
+    border: 2px solid white;
+    width: 80%;
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+body {
+    background-color: black;
+}
+
+p {
+    font-size: 20px; 
+    font-weight: bold; 
+    color: white;
+}
+
+a {
+    color: white;
+    font-size: 20px;
+}
+
+.취미, .음식, .프로그래밍 {
+    text-align: center;
+    justify-content: space-around;
+}
+
+#to_list {
+    position: absolute;
+    bottom: 0%;
+}
+
+#comment {
+    position: absolute;
+
+}
