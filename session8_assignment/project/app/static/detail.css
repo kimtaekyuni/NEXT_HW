@@ -1,0 +1,42 @@
+body {
+    background-color: black;
+    color: white;
+    justify-content: space-around;
+    position: absolute;
+
+}
+
+a {
+    color: white;
+    font-size: 20px;
+    position: relative;
+}
+
+.board {
+    position: relative; 
+    border: white solid 1px;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    width: 1000px;
+    height: 800px;
+    justify-content: space-around;
+}
+
+
+
+#_1, #_2, #_3 {
+    position: absolute;
+    bottom: 0px;
+}
+
+#_1 {
+    left: 330px;
+}
+#_2 {
+    right: 460px;
+}
+
+#_3 {
+    right: 330px; 
+}

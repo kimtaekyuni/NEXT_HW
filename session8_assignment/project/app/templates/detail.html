@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'detail.css' %}" />
+</head>
+<body>
+    <div class="board">
+        <div>
+            <h2>진행 상황</h2>
+            <p>{{ post.category }}</p>
+        </div>
+        <div>
+            <h2>업무</h2>
+            <p>{{ post.title }}</p>
+        </div>
+        <div>
+            <h2>세부 사항</h2>
+            <p>{{ post.content }}</p>
+        </div>
+        <div>
+            <h2>마감 기한</h2>
+            <p>{{ post.deadline }}</p>
+        </div>
+        <a id='_1' href="{% url 'home' %}">홈으로</a>
+        <a id='_2' href="{% url 'update' post.pk %}">수정하기</a>
+        <a id='_3' href="{% url 'delete' post.pk %}">삭제하기</a>
+    </div>
+</body>
+</html>

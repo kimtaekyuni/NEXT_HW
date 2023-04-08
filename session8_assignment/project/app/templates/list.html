@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'list.css' %}" />
+</head>
+<body>
+    <div>
+        <h2 id="category_name">{{ category_name }}</h2>
+        <div class="board">
+            <p>
+                {% for post in posts %}
+                
+                    <a href="{% url 'detail' post.pk %}">{{ post.title }} [D-{{ remain_days|slice:forloop.counter|last }}]</a>
+
+                {% endfor %}
+            </p>
+            <a id='_1' href="{% url 'new' %}">글 작성하기</a>
+            <a id='_3' href="{% url 'home' %}">홈으로</a>
+            <a id='_2' href="{% url 'whole_list' %}">전체 목록으로</a>
+        </div>
+    </div>
+</body>
+</html>

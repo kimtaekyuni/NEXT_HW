@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'whole_list.css' %}" />
+
+</head>
+<body>
+    <div class="board">
+        <p>전   체</p>
+        <p>
+            {% for post in posts %}
+
+                <a href="{% url 'detail' post.pk %}">{{ post.title }}</a>
+            
+            {% endfor %}
+        </p>
+        <a id ='_1' href="{% url 'new' %}">글 작성하기</a>
+        <a id='_2' href="{% url 'home' %}">홈으로</a>
+    </div>
+</body>
+</html>

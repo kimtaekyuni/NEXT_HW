@@ -1,0 +1,23 @@
+body {
+    background-color: black;
+    color: white;
+    justify-content: space-around;
+    position: absolute;
+
+}
+
+a {
+    color: white;
+    font-size: 20px;
+    position: relative;
+}
+
+.board {
+    position: relative; 
+    border: white solid 1px;
+    top: 50%;   
+    left: 50%;
+    text-align: center;
+    width: 1000px;
+    height: 800px;
+}
