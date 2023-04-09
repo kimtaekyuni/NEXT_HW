@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Post
+from .models import Post, Comment, double_Comment
 from datetime import date
 
 
@@ -17,9 +17,17 @@ def new(request):
 
     return render(request, 'new.html')
 
-def detail(request, post_pk ):
+def detail(request, post_pk):
     post = Post.objects.get(pk=post_pk)
-
+    print(post)    
+    if request.method == 'POST':
+        content = request.POST['content']
+        Comment.objects.create(
+            post = post, 
+            content = content,
+        )
+        return redirect('detail', post_pk)
+    
     return render(request, 'detail.html', {'post': post})
 
 def update(request, post_pk):
@@ -65,3 +73,29 @@ def home(request):
 
     return render(request, 'home.html', { 'posts' : posts, 'To_do_len': To_do_len})
 
+def delete_comment(request, post_pk, comment_pk):
+   comment = Comment.objects.get(pk=comment_pk)
+   comment.delete()
+   return redirect('detail',post_pk)
+
+def double_comment(request, post_pk, comment_pk):
+   post = Post.objects.get(pk=post_pk)        
+        
+   if request.method == 'POST':
+        comment = Comment.objects.get(pk=comment_pk)
+        content = request.POST['content']
+        double_Comment.objects.create(
+            comment = comment, 
+            content = content,
+        )
+        return redirect('detail',post_pk)
+
+   return render(request, 'detail.html', {'post': post})
+
+def delete_double_comment(request, post_pk, comment_pk, double_comment_pk):
+   double_comment = double_Comment.objects.get(pk=double_comment_pk)
+   double_comment.delete()
+   return redirect('detail',post_pk)
+
+def base(request):
+    return render(request, 'base.html')

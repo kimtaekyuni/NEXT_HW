@@ -1,0 +1,32 @@
+body { 
+    background-color: black;
+    color: white;
+}
+
+.bottom {
+    display : flex; 
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0%;
+}
+
+.bottom > a {
+    color: white;
+    position: absolute;
+    left: 700px;
+    display: flex;
+    direction: row;
+    width: 200px;
+    bottom: -80px;
+}
+
+.bottom > p {
+    position: absolute;
+    width: 300px;
+    left: 1200px;
+    bottom: 5px;
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    bottom: -80px;
+}

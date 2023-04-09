@@ -11,3 +11,18 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+    
+
+class Comment(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
+    content = models.TextField()
+
+    def __str__(self):
+        return self.content
+    
+class double_Comment(models.Model):
+    comment = models.ForeignKey(Comment, on_delete=models.CASCADE, related_name='double_comments')
+    content = models.TextField()
+
+    def __str__(self):
+        return self.content

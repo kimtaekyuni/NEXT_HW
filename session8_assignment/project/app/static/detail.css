@@ -40,3 +40,8 @@ a {
 #_3 {
     right: 330px; 
 }
+
+.comment > li > a {
+    font-size: 12px;
+}
+

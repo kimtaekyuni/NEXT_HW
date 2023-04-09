@@ -24,10 +24,14 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('new/', views.new, name='new'),
     path('whole_list', views.whole_list, name='whole_list'),
-    path('detail/<int:post_pk>/', views.detail, name='detail'),
+    path('base', views.base, name='base'),
+    path('detail/<int:post_pk>', views.detail, name='detail'),
     path('update/<int:post_pk>/', views.update, name='update'),
     path('delete/<int:post_pk>/', views.delete, name='delete'),
     path('list/<str:category_name>', views.list, name='list'),
+    path('delete-comment/<int:post_pk>/<int:comment_pk>',views.delete_comment, name='delete-comment'),
+    path('delete_double_comment/<int:post_pk>/<int:comment_pk>/<int:double_comment_pk>',views.delete_double_comment, name='delete_double_comment'),
+    path('double_comment/<int:post_pk>/<int:comment_pk>',views.double_comment, name='double_comment'),
 ]
 
 
