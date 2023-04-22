@@ -1,0 +1,49 @@
+body {
+    background-color: black;
+    color: white;
+    justify-content: space-around;
+    position: absolute;
+
+}
+
+a {
+    color: white;
+    font-size: 20px;
+    position: relative;
+}
+
+.board {
+    position: relative; 
+    border: white solid 1px;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    width: 1000px;
+    height: 800px;
+}
+
+#_1, #_2, #_3 {
+    position: absolute;
+    bottom: 0px;
+}
+
+#_1 {
+    left: 300px;
+}
+#_2 {
+    right: 410px;
+}
+
+#_3 {
+    right: 300px; 
+}
+
+#category_name {
+    position: relative;
+    left: 97%;
+}
+
+p {
+    display: flex;
+    flex-direction: column;
+}

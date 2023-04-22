@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block css %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'detail.css' %}" />
+{% endblock %}
+{% block content %}
+    <div class="board">
+        <div>
+            <h2>진행 상황</h2>
+            <p>{{ post.category }}</p>
+        </div>
+        <div>
+            <h2>업무</h2>
+            <p>{{ post.title }}</p>
+        </div>
+        <div>
+            <h2>세부 사항</h2>
+            <p>{{ post.content }}</p>
+        </div>
+        <div>
+            <h2>마감 기한</h2>
+            <p>{{ post.deadline }}</p>
+        </div>
+        <div>
+            <form method="POST">
+                {% csrf_token %}
+                <input type="text" name="content" placeholder="댓글을 입력해주세요" />
+                <button type="submit">작성하기</button>
+            </form>
+        </div>
+        <div class="comment">
+            {% for comment in post.comments.all %}
+                <li>{{ comment.content }}<a href="{% url 'delete-comment' post.pk comment.pk %}">(삭제)</a>
+                    <form action="{% url 'double_comment' post.pk comment.pk %}" method="POST">
+                        {% csrf_token %}
+                        <input type="text" name="content" placeholder="대댓글을 입력해주세요" />
+                        <button type="submit">전송</button>
+                    </form>
+                       
+                    {% for double_comment in comment.double_comments.all %}
+                     <li>{{double_comment.content}}<a href="{% url 'delete_double_comment' post.pk comment.pk double_comment.pk %}">(삭제)</li>
+                    {% endfor %}
+                </li>
+            {% endfor %}    
+        </div>
+        <a id='_1' href="{% url 'home' %}">홈으로 </a>
+        {% if user.pk == post.author.pk and user.is_authenticated %}
+        <a id='_2' href="{% url 'update' post.pk %}">수정하기</a>
+        <a id='_3' href="{% url 'delete' post.pk %}">삭제하기</a>
+        {% endif %}
+    </div>
+{% endblock %}

@@ -1,0 +1,36 @@
+body {
+    background-color: black;
+    color: white;
+    justify-content: space-around;
+    position: absolute;
+
+}
+
+.board {
+    position: relative; 
+    border: white solid 1px;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    width: 1000px;
+    height: 800px;
+    justify-content: space-around;
+}
+
+.posts_box {
+    position: relative;
+    top: 50%;
+    left: 250%;  
+}
+
+.registration-box {
+    position: relative;
+    left: 250%;
+    top: 100%;
+}
+
+#로그인이다 {
+    position: relative;
+    top: 10%;
+    left: 250%;
+}

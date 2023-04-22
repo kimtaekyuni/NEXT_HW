@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block css %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+{% endblock %}
+{% block content %}
+    <div class="board">
+        <div class="완료">
+            <a href="{% url 'list' 'done' %}">완료 </a><br><br>
+        </div>
+        <div class="진행중">
+            <a href="{% url 'list' 'process' %}">진행중 </a><br><br><br><br>
+            <br><br> <br><br><br><br>
+            <br><br>       </div>
+        <div class="해야할_일">
+            <a href="{% url 'list' 'To_do' %}">해야할 일 [{{ To_do_len }}]</a><br><br>
+        </div><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br>
+        <br>
+        <a href="{% url 'new' %}">글 작성하기</a>
+        <a href="{% url 'whole_list' %}">전체 기록보기</a>
+    </div>
+{% endblock %}

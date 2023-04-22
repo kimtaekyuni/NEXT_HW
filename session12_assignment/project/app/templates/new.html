@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block css %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'new.css' %}">
+{% endblock %}
+
+{% block content %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <div class="board">
+            <div>
+                <div class="situation">
+                    <p>진행 상황</p>
+                    <select name="category" id="">
+                        <option value="done">완료</option>
+                        <option value="process">진행중</option>
+                        <option value="To_do">해야할 일</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <label for="title">제목</label>
+                <input type="text" name="title" id="title" placeholder="제목을 입력해주세요.">
+            </div>
+            <div>
+                <label for="content">내용</label>
+                <textarea name="content" id="content" cols="30" rows="10" placeholder="내용을 입력해주세요."></textarea>
+            </div>
+            <div>
+                <label for="deadlilne">마감기한</label>
+                <input type="date" name="deadline" id="deadline">
+            </div>
+            <button type="submit">작성하기</button>
+        </div>    
+    </form>
+    <a href="{% url 'home' %}">홈으로</a>    
+{% endblock %}

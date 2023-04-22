@@ -1,0 +1,76 @@
+body { 
+    background-color: black;
+    color: white;
+}
+
+.bottom {
+    display : flex; 
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0%;
+}
+
+.bottom > a {
+    color: white;
+    position: absolute;
+    left: 700px;
+    display: flex;
+    direction: row;
+    width: 200px;
+    bottom: -80px;
+}
+
+.bottom > p {
+    position: absolute;
+    width: 300px;
+    left: 1200px;
+    bottom: 5px;
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    bottom: -80px;
+}
+
+ul { 
+    list-style: none;
+    padding-left: 0;
+}
+
+#navbar {
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 300ms ease-in-out;
+    z-index: 1;
+    background-color: red;
+    list-style: none;
+    position: fixed;
+    height: 100%;
+    left: 0px;
+    column-count: 2;
+}
+
+#navabar__menu__item {
+    cursor: pointer;
+    margin: 0 4px;
+    position: absolute;
+    display: flex;
+    right: 10px;
+    justify-content: space-between;
+}
+
+.registration-input {
+    width: 100%;
+    margin: 0 auto;
+    height: 36px;
+    line-height: 36px;
+    border: none;
+    box-sizing: border-box;
+    margin: 15px 0;
+}
+
+.navabar__menu__item {
+    color: white;
+}
+    

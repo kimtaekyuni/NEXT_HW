@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load account socialaccount %}
+    {% providers_media_js %}
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
+    {% block css %}
+    {% endblock css %}
+    <title>Document</title>
+</head>
+<body>
+    <nav id="navbar">
+        <ul class="navbar__menu">
+            <li class="navabar__menu__item">
+                <a href="{% url 'new' %}" style="color: white">NEW</a>
+            </li>
+            <li class="navabar__menu__item">
+                <a href="{% url 'home' %}" style="color: white">HOME</a>
+            </li>
+            {% if user.is_authenticated %}
+            <span class="navbar__menu__item" style="color: white">안녕, {{user.username}}</span>
+            <li class="navabar__menu__item">
+                <a href="{% url 'logout' %}" style="color: white">로그아웃</a>
+            </li>
+            {% else %}
+            <li class="navabar__menu__item">
+                <a href="{% url 'login' %}" style="color: white">로그인</a>
+            </li>
+            <form method = "POST" action="{% provider_login_url 'kakao' %}">
+                {% csrf_token %} {{ form.as_p }} {% if redirect_field_value %}
+                <input type = "hidden" name="{{redirect_field_name }}" value="{{ redirect_field_value }}" />
+                {% endif %}
+                <button class = "primaryAction" type="submit">카카오로 로그인</button>
+            </form>
+            <li class="navabar__menu__item">
+                <a href="{% url 'signup' %}" style="color: white">회원가입</a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+    <div class="container">
+        {% block title %}
+
+        {% endblock title %}
+    </div>
+    <div class="container">
+        {% block content %}
+
+        {% endblock content %}
+    </div>
+    <div class="footer">
+            <div class="bottom">
+                <p>김태균의 블로그다</p>
+                <a href='https://next-koreauniv.notion.site/d2c2ec952a034918a044212698cc2bce'>김태균의 소개 페이지</a>
+                <p></p>
+            </div>    
+    </div>
+</body>
+</html>
