@@ -44,7 +44,7 @@
                 </li>
             {% endfor %}    
         </div>
-        <a id='_1' href="{% url 'home' %}">홈으로 </a>
+        <a id='_1' href="{% url 'home' %}">홈으로</a>
         {% if user.pk == post.author.pk and user.is_authenticated %}
         <a id='_2' href="{% url 'update' post.pk %}">수정하기</a>
         <a id='_3' href="{% url 'delete' post.pk %}">삭제하기</a>
