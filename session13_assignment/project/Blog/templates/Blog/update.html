@@ -1,0 +1,18 @@
+{% extends 'blog/base.html' %} {% block title %} Home {% endblock %} 
+{% block css%} {% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'blog/update.css' %}" />
+{% endblock %} {% block content %}
+
+<form action="" method="post">
+    {% csrf_token %}
+    <div>
+        <label for="title">제목</label>
+        <input type="text" id="title" name="title" value = "{{ post.title }}" />
+    </div>
+    <div>
+        <label for="content">내용</label>
+        <textarea name="content" id="content" cols="50" rows="50" value = "{{ post.content }}"></textarea>
+    </div>
+    <button type="submit">수정하기</button>
+</form>
+{% endblock %}
