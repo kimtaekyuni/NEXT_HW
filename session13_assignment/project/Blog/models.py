@@ -1,7 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
-
+from django.db import models
+from datetime import datetime
+from django.utils import timezone
 
 class Post(models.Model):
     title = models.CharField(verbose_name = 'TITLE', max_length=50)
@@ -41,3 +43,10 @@ class Comment(models.Model):
     def __str__(self):
         return f'{self.author}-{self.content}'
     
+
+class Posts(models.Model):
+   file = models.URLField(max_length=2000)  # Consider the maximum length required for your URLs
+
+
+   def __str__(self):
+       return self.file
